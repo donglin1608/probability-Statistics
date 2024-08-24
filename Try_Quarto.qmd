@@ -1,0 +1,57 @@
+---
+title: "Class notes"
+author: Donglin Xiong
+date: 08/24/2024
+format: html
+---
+
+# Introduction to Statistics
+
+-   Notes
+
+-   Definition and formulas
+
+## Statistics Calculations
+
+### Example : basic Statistics in R
+
+```{r}
+# Example: calculate the mean
+data <- c(5, 10, 15, 20, 25)
+mean(data)
+
+```
+
+```{r}
+# calculate the mean with trim
+mean(data, trim = 0.2)
+
+```
+
+```{r}
+#Median
+median(data)
+
+```
+
+```{r}
+#Summary
+Summary(data)
+```
+
+```{r}
+#Structure of the data
+str(data)
+
+```
+
+```{r}
+#Example: scatter plot
+plot(iris$Petal.Width, iris$Petal.Length)
+```
+
+```{r}
+#example: advance scatter plot
+library(ggplot2)
+ggplot(data = iris, aes(x = Petal.Width, y = Petal.Length, color = Species)) + geom_point()
+```
