@@ -1,0 +1,61 @@
+---
+title: "L1_MAT325_Xiong_08262024"
+format: html
+---
+
+## Exam notes
+
+Student allow to use quarto notes as reference. 
+
+Professor will provide the R script and expect student to follow the tutorials.
+
+# Excel, CSV, and python 
+
+```{r}
+list <- c(1,3,5,7,9, 2, 4)
+order(list)
+print(list)
+
+
+
+
+```
+
+# Why do we need mean and median?what is the difference between them? the 
+distance indicate the skewness of the data
+
+
+```{r}
+list <- c(1,3,5,7,9, 2, 4)
+
+order(list, decreasing = TRUE)
+```
+## Example 
+According to a scientific journal, an important property of a fiber is its water absorbency. A random sample of 20 pieces of cotton fiber was taken and the absorbency on each piece was measured. The accompanying table shows the absorbency values. Complete parts (a) through (c) below.
+
+```{r}
+absorbency <- c(
+  18.62, 21.42, 20.76, 21.68, 19.26, 22.33, 20.27, 23.74, 19.37, 20.62,
+  18.92, 20.44, 22.93, 22.98, 19.19, 21.93, 22.05, 19.73, 18.00, 21.23
+)
+
+mean(absorbency)
+# Infact I can store mean value in the object then use the object in the round function. 
+mean_abs <- mean(absorbency)
+#round the mean to 2 decimal places
+round(mean_abs, 1)
+
+# when we use trim function we can remove the outliers from the data.
+mean_abs_trim <- mean(absorbency, trim = 0.1)
+mean(mean_abs_trim)
+```
+# Dotplot in R
+```{r}
+# customizing the dotplot with colors and labels
+dotchart(absorbency, main = "Absorbency of cotton fiber", xlab = "Absorbency", ylab = "Fiber", col = "blue", labels = c("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T"))
+
+dotchart(absorbency, main = "Absorbency of cotton fiber", xlab = "Absorbency", ylab = "Fiber")
+
+```
+
+
