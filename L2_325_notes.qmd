@@ -171,7 +171,11 @@ new_data_point <- tribble(
   4,6
 )
 
+ggplot(new_data_point, aes(x = Control, y = Treatment)) + geom_point()
+
+
 
 ```
+
 
 
