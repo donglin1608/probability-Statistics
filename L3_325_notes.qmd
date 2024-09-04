@@ -3,3 +3,11 @@ title: "Measures of variability"
 format: html
 ---
 
+library(ggplot2)
+library(gridExtra)
+
+# Generate random numbers of from different distributions 
+
+set.seed(123) # For reproducibility
+uniform_data <- runif(1000)
+
